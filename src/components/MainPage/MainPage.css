@@ -1,0 +1,173 @@
+:root{
+    font-size: 16px;
+}
+
+body{
+  height: 100%;
+
+}
+
+
+.main-page{
+    position: absolute; /* Set position to absolute */
+    top: 0; /* Set top and left to 0 */
+    left: 0;
+    margin-left:5vw;
+    width: 95vw;
+ /* Set width and height to full viewport */
+    height: 100vh;  
+    background: linear-gradient(to right, rgb(11, 0, 62), rgb(255, 0, 72)), radial-gradient(circle at bottom right, rgb(255, 251, 0), transparent);
+    background-blend-mode: screen;
+    display: none;
+}
+
+
+@media (max-width:900px) {
+
+  .main-page{
+    height: calc(100vh - 5rem);
+  }
+}
+
+
+.main-page.inactive{
+    height: 0;
+    opacity: 0;
+    z-index: 90;
+    display: none;
+}
+
+
+.main-page.active{
+    opacity: 1;
+    
+    visibility: visible;
+    display:block;
+}
+
+body::-webkit-scrollbar{
+    position: absolute;
+   display: none;
+    
+}
+
+/* body::-webkit-scrollbar-track{
+    background: black;
+}
+
+body::-webkit-scrollbar-thumb{
+    background: rgb(240, 0, 4);
+} */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Niconne&display=swap');
+
+.header{
+
+  padding-left: 8vh;
+  padding-right: 8vh;
+  padding-top: 4vh;
+  /* height: 100vh; */
+  animation-delay: 2s;
+  user-select: none;
+  /* pointer-events: none; */
+  animation: fadeInLeft 2s forwards;
+
+  color: #ffffff;
+  text-shadow: 7px 4px 1px rgba(0,0,0,0.32);
+               
+}
+
+.header h1{
+  font-size: clamp(3rem, 1rem + 10vw, 7rem);
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+@media (max-width: 900px){
+
+  .header{
+    text-shadow: 5px 5px 0px #02000028;
+    height: inherit;
+  }
+
+  
+
+
+
+}
+
+
+
+@keyframes fadeInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+
+
+
+.buttons{
+  display: flex;
+  width: inherit ;
+  align-items: center;
+  justify-content: space-evenly;
+  justify-items: center;
+}
+
+.button-54 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-54:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+.button-54 svg{
+  padding-left: 1vh;
+}
+
+@media (min-width: 768px) {
+  .button-54 {
+    padding: 0.25em 0.75em;
+  }
+}
+
+@media (max-width: 900px) {
+ .main-page{
+  margin-left: 0;
+  width: 100%;
+ }
+
+}
+
+
+/* ABOUT */
+
+.about{
+  height: 100vh;
+  width: inherit;
+  
+}

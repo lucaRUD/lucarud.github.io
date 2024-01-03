@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,900&display=swap');
+
+:root {
+  font-size: 16px;
+  --transition-speed:600ms;
+}
+
+.sidebar {
+  &.inactive {
+    width: 10vh;
+    background-color: white;
+    visibility: hidden;
+  }
+
+  &.active {
+    background-color: rgb(57, 57, 57);
+    z-index: 100;
+  }
+
+  position: fixed;
+  list-style: none;
+  z-index: -700;
+  transition: width .2s ease;
+
+  /* adjust as needed */
+  background-color: white;
+}
+
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  transition: width 1s;
+  justify-content: space-between;
+  font-family: 'Poppins', sans-serif;
+}
+
+.sidebar-item {
+  width: 100%;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  // justify-content: center;
+  width: inherit;
+  text-decoration: none;
+  filter: grayscale(100%) opacity(0.7);
+  transition: 0.3s;
+
+
+  /* Add these lines */
+  
+  transition: transform .5s ease-out;
+
+  /* Adjust timing as needed */
+
+  &:hover {
+    filter: grayscale(0%) opacity(1);
+    background: rgb(40, 40, 40);
+  }
+}
+
+
+
+
+.sidebar.active .sidebar-link {
+  transform: translateX(0);
+}
+
+.link-text {
+  display: none;
+  margin-left: 1rem;
+  color: antiquewhite;
+  pointer-events: none;
+  user-select: none;
+}
+
+.sidebar-link svg {
+  font-size: 5vh;
+  color: rgb(255, 255, 255);
+  margin: 0 1.35vw; ///IMPORTANT FOR ICONS
+  
+}
+
+// @media (min-width:1000px){
+
+//   .sidebar-link svg {
+//     margin: 0 2vh; ///IMPORTANT FOR ICONS
+    
+//   }
+
+// }
+
+/*  LOGO  */
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+  width: inherit;
+  text-decoration: none;
+
+  /* filter: grayscale(100%) opacity(0.7); */
+  transition: 0.3s;
+  background-color: rgb(0, 0, 0);
+
+  /* Add these lines */
+  transform: translateX(-200%);
+  transition: transform .5s ease-out;
+
+  /* Adjust timing as needed */
+
+  &:hover {
+    filter: grayscale(0%) opacity(1);
+    background: rgb(0, 0, 0);
+  }
+}
+
+.sidebar.active .sidebar-logo {
+  transform: translateX(0);
+}
+
+.sidebar-logo svg {
+  font-size: calc((5vw / 4) + (0.6vh));
+  color: rgb(255, 255, 255);
+  margin: 0 3vh;
+}
+
+.link-text-logo {
+  display: none;
+  margin-left: 1rem;
+  font-family: 'Poppins', sans-serif;
+  color: antiquewhite;
+  pointer-events: none;
+}
+
+.sidebar:hover .link-text-logo {
+  display: inline-block;
+
+  /* clear: both; */
+  font-size: 0.8em;
+
+  font-weight: 600;
+  letter-spacing: 0.3ch;
+  overflow: hidden;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.sidebar-item-logo {
+  width: 100%;
+}
+
+.sidebar-logo svg {
+  transform: rotate(0deg);
+  transition: transform var(--transition-speed);
+}
+
+.sidebar:hover .sidebar-logo svg {
+  transform: rotate(-180deg);
+  color: #008cff;
+}
+
+/*  RESPONSIVENESS */
+
+@media only screen and (max-width: 900px) {
+  .sidebar {
+    bottom: 0;
+    width: 100vw;
+    height: 5rem;
+    display: flex;
+  }
+
+  .sidebar-item-logo {
+    display: none;
+  }
+
+  .sidebar-links {
+    flex-direction: row;
+  }
+
+  .sidebar-link {
+    justify-content: center;
+  }
+  .sidebar-link svg{
+    font-size: 1.5rem;
+  }
+
+  main {
+    margin: 0;
+  }
+  @for $i from 1 through 5 {
+    .sidebar-item:nth-last-child(#{$i}) .sidebar-link {
+      transition-delay: #{($i) * 0.50}s;
+    }
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .sidebar {
+    // width: 5vw;
+    height: 100%;
+    width: 5vw;
+    left: 0;
+    top: 0;
+    padding: 0;
+    margin: 0;
+
+    &:hover {
+      width: 15rem;
+      transition: 0.2s;
+
+      /* adjust as needed */
+
+      .link-text {
+        display: block;
+      }
+    }
+  }
+
+  .sidebar-link{
+    transform: translateX(-200%);
+  }
+
+
+  .sidebar-link svg{
+    font-size: 2vw;
+  }
+
+  @for $i from 1 through 5 {
+    .sidebar-item:nth-child(#{$i}) .sidebar-link {
+      transition-delay: #{($i) * 0.35}s;
+    }
+  }
+}
+
+
+@media only screen and (min-width: 1500px) {
+  .sidebar-link svg{
+    font-size: 1.7vw;
+  }
+
+  .sidebar-logo svg {
+    font-size: 2.2vw;
+  }
+
+}

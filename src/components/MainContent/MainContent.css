@@ -1,0 +1,40 @@
+:root{
+    font-size: 16px;
+}
+
+.main-content{
+    position: absolute; /* Set position to absolute */
+    top: 0; /* Set top and left to 0 */
+    left: 0;
+    width: 100vw; /* Set width and height to full viewport */
+    height: 100vh;
+    display: none;
+}
+
+
+.main-content.inactive{
+    height: 0;
+    opacity: 0;
+    z-index: 90;
+    display: none;
+}
+
+
+.main-content.active{
+    opacity: 1;
+    height: 100%;
+    visibility: visible;
+    display:block;
+}
+
+body::-webkit-scrollbar{
+    width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track{
+    background: black;
+}
+
+body::-webkit-scrollbar-thumb{
+    background: rgb(240, 0, 4);
+}

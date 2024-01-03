@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+
+
+.body-no-scroll {
+  overflow: hidden;
+}
+
+
+.intro {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #111;
+    transition: background-color 2s ease;
+  }
+
+
+  .hovered {
+    background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+    background-size: 1800% 1800%;
+    
+    -webkit-animation: rainbow 0.5s ease infinite;
+    -z-animation: rainbow 0.5s ease infinite;
+    -o-animation: rainbow 0.5s ease infinite;
+      animation: rainbow 0.5s ease infinite;
+  }
+
+  .clicked {
+    background-color: white;
+  }
+
+  .fade-out {
+    animation: fadeOut 1s forwards;
+  }
+
+  .center-text {
+    position: absolute;
+    top: 40%;
+    font-family: 'Poppins', sans-serif;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    z-index: 1000;
+    font-size: 5em;
+    color:black;
+    animation: fadeInOut ease-in 4s forwards;
+  }
+
+  .center-text-two{
+    position: absolute;
+    top: 40%;
+    font-family: 'Poppins', sans-serif;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    z-index: 1000;
+    font-size: 3.5em;
+    color:black;
+    animation: fadeInOut ease-in 4s forwards;
+  }
+  
+  @keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @keyframes fadeInOut {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  
+
+@-webkit-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-moz-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-o-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@keyframes rainbow { 
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+
+
+
+  
+  /* CSS */
+  .buttonrainbow {
+    padding: 0.8em 1.1em;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: #111;
+    cursor: pointer;
+    font-size: 2rem;
+    position: relative;
+    z-index: 0;
+    border-radius: 13px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .buttonrainbow:before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #48ff00,
+      #00ffd5,
+      #002bff,
+      #7a00ff,
+      #ff00c8,
+      #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 500%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing-buttonrainbow 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 13px;
+  }
+  
+  @keyframes glowing-buttonrainbow {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  .buttonrainbow:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+
+
+  .buttonrainbow.inactive{
+    display: none;
+  }
+
+  @media only screen and (max-width: 900px) {
+    .posttransition {
+      position: fixed;
+      left: 0;
+      top: 0;
+      list-style: none;
+      width: 100%;
+      height: 100vh;
+      z-index: 99;
+      background-color: white;
+      transition: top 2s, background-color 2s;
+    }
+    
+    
+    
+    .posttransition.inactive {
+      top:0 ;
+      background-color: white;
+      visibility: hidden;
+    }
+    
+    .posttransition.active {
+      top:calc(100vh - 5rem);
+      background-color: rgb(57, 57, 57);
+      z-index: 99;
+    }
+
+
+  }
+
+
+  
+  @media only screen and (min-width: 900px) {
+
+
+    .posttransition {
+      position: fixed;
+      left: 0;
+      top: 0;
+      list-style: none;
+      width: 100%;
+      height: 100vh;
+      z-index: 99;
+      background-color: white;
+      transition: width 2s, background-color 2s;
+    }
+    
+    
+    
+    .posttransition.inactive {
+      width: 100%;
+      background-color: white;
+      visibility: hidden;
+    }
+    
+    .posttransition.active {
+      width: 5vw;
+      background-color: rgb(57, 57, 57);
+      z-index: 99;
+    }
+    
+  }
