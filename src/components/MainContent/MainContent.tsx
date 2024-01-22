@@ -12,7 +12,7 @@ import { OrbitControls } from '@react-three/drei';
 
 //Import dome Tex
 
-import smallTex from './Nebula_small.jpg'
+// import smallTex from './Nebula_small.jpg'
 
 const MainContent = ({isActive}) => {
 

@@ -200,6 +200,7 @@
       transition-delay: #{($i) * 0.50}s;
     }
   }
+  
 }
 
 @media only screen and (min-width: 900px) {
@@ -227,10 +228,13 @@
   .sidebar-link{
     transform: translateX(-200%);
   }
+  .sidebar-links {
+    flex-direction: column;
+  }
 
 
   .sidebar-link svg{
-    font-size: 2vw;
+    font-size: clamp(2vw , 0.70rem , 2vw);
   }
 
   @for $i from 1 through 5 {
@@ -244,10 +248,12 @@
 @media only screen and (min-width: 1500px) {
   .sidebar-link svg{
     font-size: 1.7vw;
+    margin: 0 1.5vw; 
   }
 
   .sidebar-logo svg {
     font-size: 2.2vw;
+    margin: 0 2.5vh;
   }
 
 }

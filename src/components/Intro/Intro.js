@@ -4,18 +4,18 @@ import Sidebar from '../sidebar/sidebar'; // Import your Sidebar component
 import MainPage from '../MainPage/MainPage';
 import { TextureLoader } from 'three';
 import "./Intro.css"
-import domTex from './Nebula24.hdr'
+// import domTex from './Nebula24.hdr'
 let texture;
 
 
-export function preloadTexture() {
-  const loader = new TextureLoader();
-  texture = loader.load(domTex);
-}
+// export function preloadTexture() {
+//   const loader = new TextureLoader();
+//   texture = loader.load(domTex);
+// }
 
-export function getTexture() {
-  return texture;
-}
+// export function getTexture() {
+//   return texture;
+// }
 
 const Intro = () => {
   const [hovered, setHovered] = useState(false);
