@@ -5,6 +5,7 @@
     flex-direction: column;
     width: 29vw;
     height: 70vh;
+    min-height: 450px;
     
   }
   
@@ -50,6 +51,7 @@
     max-height: 80vh; /* Adjust this value as needed */
     max-width: 19vw;
     object-fit: cover;
+    min-height: 300px;
     box-shadow: 31px 32px 6px -11px rgba(0,0,0,0.32);
   }
   
