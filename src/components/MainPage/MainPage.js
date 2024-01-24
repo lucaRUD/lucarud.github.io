@@ -13,6 +13,11 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import myGif from './movingwall.gif';
 import flowerGif from './giphy.gif';
 import headerphoto from './headerphoto.jpg';
+import './css/top.css';
+import './css/about.css';
+import './css/project-gallery.css';
+import './css/modal.css';
+
 import cristocentricpreview from './project-previews/CRISTOCENTRIC.png';
 import cristocentricImages from './projects/cristocentric/images.js';
 

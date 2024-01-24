@@ -1,0 +1,75 @@
+.project{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 29vw;
+    height: 70vh;
+    
+  }
+  
+  
+  .project-gallery-page {
+    height: 100vh;
+    min-height:520px;
+    min-height: 800px;
+    overflow: hidden;
+    /* background: right linear-gradient(#1a004d,#6d48f2); */
+    background-image:url("../blue background.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .project-gallery-page h2{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    text-align: center;
+    padding-bottom: 2vh;
+  }
+  
+  .project-gallery-carousel{
+    width: 90vw;
+  }
+  
+  
+  .project-gallery-carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10vh; 
+    font-family: 'Poppins', sans-serif;
+    color: white;
+  }
+  
+  .project-gallery-carousel-item img {
+    width: 80%;
+    max-height: 80vh; /* Adjust this value as needed */
+    max-width: 19vw;
+    object-fit: cover;
+    box-shadow: 31px 32px 6px -11px rgba(0,0,0,0.32);
+  }
+  
+  
+  
+  @media (max-width: 900px) {
+    .project{
+      width:78vw;
+      height: 60vh;
+      /* margin: 0 0; */
+    }
+    .project-gallery-carousel-item img {
+      max-height: 85vh;
+      /* min-height: 50vh; */
+      min-width:40vw;
+  
+    }
+    .project-gallery-carousel{
+      width: 78vw;
+    }
+  
+  }
+  

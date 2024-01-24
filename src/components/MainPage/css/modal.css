@@ -1,0 +1,168 @@
+/* MODAL */
+
+
+.ReactModal__Overlay {
+    backdrop-filter: blur(5px);
+  }
+  
+  .modal-content {
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    width: 65%;
+    height: fit-content;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 3vw;
+    inset: 50% 40px 40px 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    /* border: 1px solid rgb(204, 204, 204); */
+    /* background: rgb(14, 14, 14); */
+    background: linear-gradient(#000,#171717);
+    overflow: auto;
+    border-radius: 8px;
+    outline: none;
+    padding: 20px;
+  }
+  
+  
+  
+  
+  
+  
+  
+  .modal-leftside{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    padding: 2vh;
+  }
+  
+  .modal-rightside{
+    display: flex;
+    flex-direction: column;
+    overflow-y:scroll;
+    height: 68vh;
+    
+  }
+  
+  .photo-carousel{
+    height: 85vh;
+  }
+  
+  .thumbs li{
+    width: 7vw !important;
+  }
+  
+  .modal-buttons{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    max-height: 15vh;
+    width: 100%;
+  }
+  
+  .modal-exit-button{
+    display: none;
+  }
+  
+  
+  
+  .modal-buttons button {
+    max-width: 12rem;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    padding: 0.875rem 40px 0.875rem 1.75rem;
+    background-color: #039be5;
+    background-image: linear-gradient(to top right, #21002a,#0a0060);
+    color: #ffffff;
+    width: 38vw;
+    font-size: clamp(0.6rem,3vw,1rem);
+    line-height: 1.25rem;
+    white-space: nowrap;
+    font-weight: 700;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    /* text-transform: uppercase; */
+    vertical-align: middle;
+    align-items: center;
+    border-radius: 0.5rem;
+    gap: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border: none;
+    transition: all .6s  ease;
+  }
+  
+  .modal-buttons button span {
+    background-color: #00121a;
+    display: grid;
+    position: absolute;
+    right: 0;
+    place-items: center;
+    width: 2rem;
+    height: 100%;
+  }
+  
+  .modal-buttons button span svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  
+  .modal-buttons button:hover {
+    box-shadow: 0 4px 30px  rgba(4, 175, 255, .1), 0 2px 30px rgba(11, 158, 255, 0.06);
+  }
+  
+  
+  
+  
+  
+  @media (max-width: 900px){
+    .modal-content {
+      flex-direction: column;
+      margin-left: 0;
+      width: 100%;
+      align-items: center;
+      height: 100%;
+      overflow-y: scroll;
+    }
+  
+    .modal-leftside{
+      width: 90vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 2vh;
+      padding-top: 10vh;
+      height: fit-content;
+      flex-direction: column;
+      
+    }
+  
+    .modal-rightside{
+      overflow:visible;
+      padding: 2vh 8vw;
+    }
+  
+    .photo-carousel{
+      height: 50vw;
+    }
+  
+    .thumbs li{
+      width: 16vw !important;
+    }
+  
+    .modal-exit-button{
+      display: inline;
+      background: transparent;
+      border: 0;
+      position: absolute;
+      right: 40px;
+      top: 40px;
+      font-size: 2rem;
+    }
+  
+  
+  }
+  
+  

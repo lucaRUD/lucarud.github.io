@@ -1,0 +1,107 @@
+/* ABOUT */
+
+.about{
+    height: 100vh;
+    width: inherit;
+    min-height:520px;
+    display: flex;
+    flex-direction: row;
+    background:linear-gradient(#000a42,#2950ff);
+    justify-content: space-evenly;
+  
+  }
+  
+  .about-text{
+    max-width: 50%;
+    width: 50%;
+    margin: 25vh 0;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right-style: solid;
+    border-width: 0.3vh;
+    color: white;
+    font-size: 1.1rem;
+    text-align:justify;
+    
+    
+  }
+  
+  .about-text p{
+    width: 65%;
+    max-height: 40vh;
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(0.7rem,1.3vmax,1rem);
+    min-width: 40vw;
+    hyphens: auto;
+    letter-spacing: 0.05em;
+    word-spacing: 0.1em;
+  }
+  
+  .about-text h2{
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+  }
+  
+  .about-image{
+    /* width: 80%; */
+    width: 50%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    
+  
+    
+  }
+  
+  .about-image img{
+    max-width: 40%;
+    min-width: 9rem;
+  
+  }
+  
+  @media (max-width: 900px) {
+  
+    .about{
+      flex-direction: column;
+      height: 100vh; 
+      min-height: 700px;
+      justify-content: start;
+      padding-top: 5vh;
+      align-items: center;
+      /* atentie mare daca nu merge marimea */
+    }
+  
+    .about-text{
+      max-width: 100vh;
+      margin: 0 0;
+      padding: 0;
+      width: 90%;
+      border-right-style: none ;
+    }
+  
+    .about-text p{
+      max-height: 50vh;
+      width: 85%;
+      font-size: clamp(0.5rem, 1.8vmax,2rem);
+      padding:  0 8vh;
+      max-width: 90vw;
+    
+    }
+  
+    .about-image{
+      padding: 0;
+      width: 100vw;
+      /* display: none; */
+    }
+  
+    .about-image img{
+      padding-top: 2vh;
+      width: 40%;
+      max-width: 25vw;
+  
+      
+    }
+  }
+  
