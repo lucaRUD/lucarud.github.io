@@ -237,7 +237,7 @@
     font-size: clamp(2vw , 0.70rem , 2vw);
   }
 
-  @for $i from 1 through 5 {
+  @for $i from 1 through 6 {
     .sidebar-item:nth-child(#{$i}) .sidebar-link {
       transition-delay: #{($i) * 0.35}s;
     }

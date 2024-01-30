@@ -208,6 +208,13 @@
     }
 
 
+    .center-text{
+      width: 90vw;
+      font-size: 9vmax;
+      text-align: center;
+    }
+
+
   }
 
 

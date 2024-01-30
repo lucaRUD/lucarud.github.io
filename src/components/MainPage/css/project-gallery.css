@@ -28,6 +28,7 @@
   .project-gallery-page h2{
     font-family: 'Poppins', sans-serif;
     color: white;
+    font-size: 2rem;
     text-align: center;
     padding-bottom: 2vh;
   }
@@ -66,7 +67,7 @@
     .project-gallery-carousel-item img {
       max-height: 85vh;
       /* min-height: 50vh; */
-      min-width:40vw;
+      min-width:53vw;
   
     }
     .project-gallery-carousel{

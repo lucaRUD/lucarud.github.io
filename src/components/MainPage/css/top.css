@@ -116,7 +116,7 @@
   
   @media (min-width: 768px) {
     .button-54 {
-      padding: 0.25em 0.75em;
+      padding: 0.5rem 0.8rem;
     }
   }
   
@@ -149,7 +149,7 @@
     max-width: 100%;
   }
   .buttons{
-  padding-top: 5vh ;
+  /* padding-top: 5vh ; */
   height: 20vh;
   }
   

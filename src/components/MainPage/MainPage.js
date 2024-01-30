@@ -1,8 +1,9 @@
-import React,{useState, useEffect} from 'react';
+import React,{useState, useEffect,useContext, useRef} from 'react';
 import Modal from 'react-modal';
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; 
 import './MainPage.css';
+import { RefsContext } from '../../App.js'; // adjust the path as needed
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
@@ -20,6 +21,7 @@ import './css/modal.css';
 
 import cristocentricpreview from './project-previews/CRISTOCENTRIC.png';
 import cristocentricImages from './projects/cristocentric/images.js';
+
 
 
 const projectImages = {
@@ -144,27 +146,32 @@ function ProjectGallery() {
 }
 
 
+
+
 const MainPage = ({isActive}) => {
+
+  const { aboutRef, projectsRef, mainpageRef } = useContext(RefsContext);
+
   return (
-    <div className={`main-page ${isActive ? 'active' : 'inactive'}`}>
-          <div className='top'>
+    <div  className={`main-page ${isActive ? 'active' : 'inactive'}`} >
+          <div className='top' id='top' ref={mainpageRef}>
             <div className="header"><h1>Hello, I am <br></br>Stancu Rudolf Luca.<br></br>and I am a<br></br> Web Developer.</h1>
               <img src={myGif} alt="My gif" />
         
             </div>
             <div className='buttons'>
-              <button className="button-54" role="button" onClick={() => document.getElementById('about').scrollIntoView({ behavior: 'smooth' })}>
-                  Scroll Down<FontAwesomeIcon icon={faAngleDoubleDown} />
-              </button>
+            <button className="button-54" role="button" onClick={() => aboutRef.current.scrollIntoView({ behavior: 'smooth' })}>
+                Scroll Down<FontAwesomeIcon icon={faAngleDoubleDown} />
+            </button>
             </div>
             
           </div>
         
-          <div className='about' id='about'>
+          <div className='about' id='about'  ref={aboutRef}>
             
-            <div className='about-text' id='about-text'>
+            <div className='about-text'>
                 <h2>Who am I?</h2>
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;My name is Stancu Luca, i am based in Timișoara,Romania. My pursuit in understanding technology started in my childhood and since then, this growing passion has shaped
+                <p>        My name is Stancu Luca, i am based in Timișoara,Romania. My pursuit in understanding technology started in my childhood and since then, this growing passion has shaped
                 most of my career choices. After finishing middle school i chose mathematics and informatics as my main subject in highschool.After finising highschool i went to college and chose to pursue Computer Science at the West University of Timișoara.
                 In my college years I started getting interested in Web Development and since then I have been on a learning journey, adventuring in various projects.
                 </p>
@@ -175,7 +182,9 @@ const MainPage = ({isActive}) => {
             </div>
           </div> 
           
-          <ProjectGallery />
+          <div id='projects' ref={projectsRef}>
+            <ProjectGallery/>
+          </div>
 
     </div>
   );

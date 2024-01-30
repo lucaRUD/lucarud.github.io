@@ -6,7 +6,8 @@
     min-height:520px;
     display: flex;
     flex-direction: row;
-    background:linear-gradient(#000a42,#2950ff);
+    /* background:linear-gradient(#000a42,#2950ff); */
+    background: linear-gradient(#12006e,#b0f);
     justify-content: space-evenly;
   
   }
@@ -67,7 +68,7 @@
       flex-direction: column;
       height: 100vh; 
       min-height: 700px;
-      justify-content: start;
+      justify-content: space-between;
       padding-top: 5vh;
       align-items: center;
       /* atentie mare daca nu merge marimea */
@@ -77,6 +78,7 @@
       max-width: 100vh;
       margin: 0 0;
       padding: 0;
+      height: 70vh;
       width: 90%;
       border-right-style: none ;
     }
@@ -93,6 +95,7 @@
     .about-image{
       padding: 0;
       width: 100vw;
+      height: 30vh;
       /* display: none; */
     }
   
