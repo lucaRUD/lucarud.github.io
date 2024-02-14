@@ -58,75 +58,7 @@ body::-webkit-scrollbar{
     
 }
 
-/* body::-webkit-scrollbar-track{
-    background: black;
-}
-
-body::-webkit-scrollbar-thumb{
-    background: rgb(240, 0, 4);
-} */
 
 
-
-
-
-
-/* PROJECT-GALLERY */
-
-/* .project-gallery {
-  height: 100vh;
-  width: inherit;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: right linear-gradient(#1a004d,#6d48f2);
-  box-sizing: border-box;
-}
-
-.project-gallery h2{
-  font-family: 'Poppins', sans-serif;
-  color: white;
-  padding-bottom: 7vh;
-  font-size: 2rem ;
-}
-
-.projects {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  width: 100%;
-}
-
-.project-gallery-item {
-  flex-basis: calc(100% / 3);
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.project-gallery-item img {
-  width: 60%;
-}
-
-
-
-.project h3 {
-  font-family: 'Poppins', sans-serif;
-  color: white;
-}
-
-
-
-@media (max-width: 900px) {
-  .project-gallery-item {
-    flex-basis: 100%; 
-  }
-
-  .project-gallery{
-    height: fit-content;
-  }
-} */
 
 

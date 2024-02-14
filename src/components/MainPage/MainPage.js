@@ -1,6 +1,8 @@
 import React,{useState, useEffect,useContext, useRef} from 'react';
 import Modal from 'react-modal';
+import Footer from '../footer/footer.js'
 import { Carousel } from 'react-responsive-carousel';
+import { saveAs } from 'file-saver';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; 
 import './MainPage.css';
 import { RefsContext } from '../../App.js'; // adjust the path as needed
@@ -8,12 +10,11 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
 import { FontAwesomeIcon,} from '@fortawesome/react-fontawesome';
-import { faAngleDoubleDown,faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faAngleDoubleDown,faDownload,faXmark } from '@fortawesome/free-solid-svg-icons';
 import { faWindowRestore } from '@fortawesome/free-regular-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import myGif from './movingwall.gif';
-import flowerGif from './giphy.gif';
-import headerphoto from './headerphoto.jpg';
+import luca from './luca.jpg';
 import './css/top.css';
 import './css/about.css';
 import './css/project-gallery.css';
@@ -31,6 +32,48 @@ const projectImages = {
 };
 
 Modal.setAppElement('#root')
+
+
+function DownloadButtonDesktop() {
+  const handleDownload = async () => {
+    try {
+      const response = await fetch('/CVjan2024.pdf');
+      const blob = await response.blob();
+      saveAs(blob, 'CV-Stancu-Luca.pdf');
+    } catch (error) {
+      console.error('Download failed:', error);
+    }
+  };
+
+  return (
+    <button className="download-button desktop" type="button"  onClick={handleDownload}>
+                Download my CV<FontAwesomeIcon icon={faDownload} />
+    </button>
+
+    
+  );
+}
+
+function DownloadButtonMobile() {
+  const handleDownload = async () => {
+    try {
+      const response = await fetch('/CVjan2024.pdf');
+      const blob = await response.blob();
+      saveAs(blob, 'CV-Stancu-Luca.pdf');
+    } catch (error) {
+      console.error('Download failed:', error);
+    }
+  };
+
+  return (
+    <button className="download-button mobile" type="button"  onClick={handleDownload}>
+                Download my CV<FontAwesomeIcon icon={faDownload} />
+    </button>
+
+    
+  );
+}
+
 
 
 function Project({ title, image, description, liveLink, repoLink, projectName}) {
@@ -168,23 +211,29 @@ const MainPage = ({isActive}) => {
           </div>
         
           <div className='about' id='about'  ref={aboutRef}>
-            
+            <div className='about-container'>
             <div className='about-text'>
                 <h2>Who am I?</h2>
                 <p>        My name is Stancu Luca, i am based in Timișoara,Romania. My pursuit in understanding technology started in my childhood and since then, this growing passion has shaped
                 most of my career choices. After finishing middle school i chose mathematics and informatics as my main subject in highschool.After finising highschool i went to college and chose to pursue Computer Science at the West University of Timișoara.
                 In my college years I started getting interested in Web Development and since then I have been on a learning journey, adventuring in various projects.
                 </p>
+                <DownloadButtonDesktop/>
+
             </div>
 
-            <div className='about-image'>
-                <img src={flowerGif} alt="lowerGif"></img>
+
+                <img src={luca} className='about-image' alt="lowerGif"></img>
+
+                <DownloadButtonMobile/>
+
             </div>
           </div> 
           
           <div id='projects' ref={projectsRef}>
             <ProjectGallery/>
           </div>
+          <Footer/>
 
     </div>
   );

@@ -10,9 +10,9 @@ const Sidebar = ({ isActive }) => {
   const [postintro, setSideBarStage] = useState(false)
   const links = [{name:'HOME', icon:faHouseChimney, ref:mainpageRef},
                 {name:'ABOUT' , icon:faInfoCircle, ref:aboutRef},
-                {name:'PROJECTS', icon: faProjectDiagram, ref:projectsRef},
-                {name: 'SOCIAL', icon: faUsers, ref:aboutRef}, 
-                {name:'CONTACT', icon:faAddressCard, ref:projectsRef},];
+                {name:'PROJECTS', icon: faProjectDiagram, ref:projectsRef},];
+                // {name: 'SOCIAL', icon: faUsers, ref:aboutRef}, 
+                // {name:'CONTACT', icon:faAddressCard, ref:projectsRef},];
 
                 const scrollToRef = (ref) => {
                   ref.current.scrollIntoView({ behavior: 'smooth' });

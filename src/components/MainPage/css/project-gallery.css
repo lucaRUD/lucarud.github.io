@@ -11,7 +11,7 @@
   
   
   .project-gallery-page {
-    height: 100vh;
+    height: 92vh;
     min-height:520px;
     min-height: 800px;
     overflow: hidden;
@@ -62,12 +62,15 @@
     .project{
       width:78vw;
       height: 60vh;
+      min-height: 70vh;
       /* margin: 0 0; */
     }
     .project-gallery-carousel-item img {
-      max-height: 85vh;
+      /* max-height: 85vh; */
+      height: auto;
+      width: 100%;
       /* min-height: 50vh; */
-      min-width:53vw;
+      min-width:40vw;
   
     }
     .project-gallery-carousel{

@@ -3,19 +3,36 @@
 .about{
     height: 100vh;
     width: inherit;
-    min-height:520px;
+    min-height:700px;
     display: flex;
     flex-direction: row;
+    align-items: center;
     /* background:linear-gradient(#000a42,#2950ff); */
-    background: linear-gradient(#12006e,#b0f);
+    /* background: linear-gradient(#12006e,#b0f); */
+    background: url(../scenic.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
     justify-content: space-evenly;
   
   }
+
+  .about-container{
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(34, 34, 34, 0.899);
+    height: 60vh;
+
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1vw;
+    min-height: 600px;
+
+    }
   
   .about-text{
     max-width: 50%;
     width: 50%;
-    margin: 25vh 0;
+    margin: 15vh 0;
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -23,7 +40,7 @@
     border-right-style: solid;
     border-width: 0.3vh;
     color: white;
-    font-size: 1.1rem;
+    font-size: 1rem;
     text-align:justify;
     
     
@@ -33,7 +50,7 @@
     width: 65%;
     max-height: 40vh;
     font-family: 'Poppins', sans-serif;
-    font-size: clamp(0.7rem,1.3vmax,1rem);
+    font-size: clamp(0.7rem,1.3vmax,0.9rem);
     min-width: 40vw;
     hyphens: auto;
     letter-spacing: 0.05em;
@@ -47,20 +64,21 @@
   
   .about-image{
     /* width: 80%; */
-    width: 50%;
+    width: 25%;
     align-items: center;
     display: flex;
     justify-content: center;
-    
-  
-    
-  }
-  
-  .about-image img{
     max-width: 40%;
     min-width: 9rem;
+    border-radius: 10px;
+    margin-right: 12vw;
+    height: auto;
+    box-shadow: 3px 3px 3px;
+    
   
+    
   }
+  
   
   @media (max-width: 900px) {
   
@@ -68,10 +86,16 @@
       flex-direction: column;
       height: 100vh; 
       min-height: 700px;
-      justify-content: space-between;
-      padding-top: 5vh;
+      /* padding-top: 5vh; */
       align-items: center;
       /* atentie mare daca nu merge marimea */
+    }
+    .about-container{
+      flex-direction: column;
+      justify-content: center;
+      height: 90vh;
+      min-height: 650px;
+      align-items: center;
     }
   
     .about-text{
@@ -85,8 +109,8 @@
   
     .about-text p{
       max-height: 50vh;
-      width: 85%;
-      font-size: clamp(0.5rem, 1.8vmax,2rem);
+      width: 90%;
+      font-size: clamp(0.5rem, 1.7vmax,2rem);
       padding:  0 8vh;
       max-width: 90vw;
     
@@ -94,17 +118,81 @@
   
     .about-image{
       padding: 0;
-      width: 100vw;
-      height: 30vh;
-      /* display: none; */
+      height: auto;
+      width: 100%;
+      max-width: 20vw;
+      margin-bottom: 4vh;
+      margin-right: 0;
     }
   
-    .about-image img{
-      padding-top: 2vh;
-      width: 40%;
-      max-width: 25vw;
-  
-      
-    }
+
   }
+  
+/* DOWNLOAD BUTTON */
+
+.download-button {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.5vw;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 3px solid;
+  padding: 0.35em 0.6em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.download-button:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+@keyframes jump {
+  0% { transform: translateY(0); }
+  10% { transform: translateY(-5px); }
+  20% { transform: translateY(0); }
+  30% { transform: translateY(-5px); }
+  40%,100%  { transform: translateY(0); }
+
+}
+
+
+.download-button svg{
+  padding-left: 1vh;
+  padding-bottom: 0.3vh;
+  transform: transform(translateY(-10px));
+  animation: jump 2s infinite;
+}
+
+.mobile{
+  display: none;
+}
+
+
+@media (min-width: 768px) {
+  .download-button {
+    padding: 0.5rem 0.8rem;
+  }
+}
+
+@media (max-width: 900px){
+  .desktop{
+    display:none;
+  }
+  .mobile{
+    display: block;
+    padding: 0.3rem 0.5rem;
+    font-size: 2.5vmax;
+
+  }
+
+}
+
   

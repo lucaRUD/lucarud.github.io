@@ -1,6 +1,7 @@
 {
   "name": "portofolio-react2",
   "version": "0.1.0",
+  "homepage": "http://lucarud.github.io",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.4.2",
@@ -15,6 +16,8 @@
     "@testing-library/user-event": "^13.5.0",
     "@types/three": "^0.157.0",
     "cors": "^2.8.5",
+    "file-saver": "^2.0.5",
+    "gh-pages": "^6.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-modal": "^3.16.1",
@@ -35,7 +38,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
