@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a7e50328.css",
+    "main.js": "/static/js/main.d3a66e65.js",
+    "static/js/787.8b543437.chunk.js": "/static/js/787.8b543437.chunk.js",
+    "static/media/movingwall.gif": "/static/media/movingwall.18e0d1dae707ddc12707.gif",
+    "static/media/CRISTOCENTRIC.png": "/static/media/CRISTOCENTRIC.8f92f1fa0652796a4ea1.png",
+    "static/media/CRISTOCENTRICpreview copy 2.png": "/static/media/CRISTOCENTRICpreview copy 2.ab6478a56974a2f7e9d4.png",
+    "static/media/CRISTOCENTRICpreview copy 3.png": "/static/media/CRISTOCENTRICpreview copy 3.ab6478a56974a2f7e9d4.png",
+    "static/media/CRISTOCENTRICpreview copy.png": "/static/media/CRISTOCENTRICpreview copy.ab6478a56974a2f7e9d4.png",
+    "static/media/CRISTOCENTRICpreview.png": "/static/media/CRISTOCENTRICpreview.ab6478a56974a2f7e9d4.png",
+    "static/media/scenic.gif": "/static/media/scenic.2567f692387b5e73f2d7.gif",
+    "static/media/blue background.jpg": "/static/media/blue background.deee54431c592cad6163.jpg",
+    "static/media/luca.jpg": "/static/media/luca.2119e9ff3940477c43f8.jpg",
+    "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/index.html",
+    "main.a7e50328.css.map": "/static/css/main.a7e50328.css.map",
+    "main.d3a66e65.js.map": "/static/js/main.d3a66e65.js.map",
+    "787.8b543437.chunk.js.map": "/static/js/787.8b543437.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a7e50328.css",
+    "static/js/main.d3a66e65.js"
+  ]
+}
