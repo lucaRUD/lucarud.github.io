@@ -17,7 +17,8 @@ body{
     left: 0;
     margin-left:5vw;
     width: 95vw;
-    height: calc(100vh - 5rem);
+    /* height: calc(100vh - 5rem); */
+    height: 100vh;
     overflow: scroll;
     overflow-x: hidden;
     background: linear-gradient(to right,rgb(30, 0, 197), rgb(11, 0, 62) ), radial-gradient(circle at bottom right, rgb(0, 0, 0), transparent);
@@ -29,7 +30,8 @@ body{
 @media (max-width:900px) {
 
   .main-page{
-    height: calc(100vh - 5rem);
+    /* height: calc(100vh - 5rem); */
+    height: 100vh;
   }
 }
 

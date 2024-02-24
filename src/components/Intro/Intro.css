@@ -202,7 +202,8 @@
     }
     
     .posttransition.active {
-      top:calc(100vh - 5rem);
+      /* top:calc(100vh - 5rem); */
+      top:100vh;
       background-color: rgb(57, 57, 57);
       z-index: 99;
     }

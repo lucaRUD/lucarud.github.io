@@ -38,7 +38,7 @@ footer{
 
 @media (max-width:900px){
     footer{
-        margin-bottom: 8vh;
+        /* margin-bottom: 8vh; */
     }
 
     .footer-links{
