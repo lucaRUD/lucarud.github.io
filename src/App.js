@@ -1,24 +1,31 @@
-import React, { createContext, useRef }  from 'react';
+import React, { createContext, useRef, useState } from 'react';
 import Intro from './components/Intro/Intro';
-import Sidebar from './components/sidebar/sidebar';
-import MainPage from './components/MainPage/MainPage';
+import PageContent from './components/PageContent';
+import './App.css';
 
 export const RefsContext = createContext();
-const App = () => {
 
+const App = () => {
   const aboutRef = useRef(null);
   const projectsRef = useRef(null);
-  const mainpageRef = useRef(null);
+  const mainPageRef = useRef(null);
+  
+  // State to manage whether PageContent is active
+  const [isPageContentActive, setIsPageContentActive] = useState(false);
+
+  // Function to set PageContent active state
+  const handleIntroComplete = () => {
+    setIsPageContentActive(true);
+  };
 
   return (
-    <div>
-    <RefsContext.Provider value={{ aboutRef, projectsRef, mainpageRef }}>
-      <MainPage />
-      <Intro />
-      <Sidebar />
+    <RefsContext.Provider value={{ aboutRef, projectsRef, mainPageRef }}>
+      {isPageContentActive ? (
+        <PageContent isActive={isPageContentActive} refs={{ aboutRef, projectsRef, mainPageRef }} />
+      ) : (
+        <Intro onComplete={handleIntroComplete} />
+      )}
     </RefsContext.Provider>
-
-    </div>
   );
 };
 

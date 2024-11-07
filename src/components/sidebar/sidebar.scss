@@ -22,11 +22,16 @@
   position: fixed;
   list-style: none;
   z-index: -700;
+  
   transition: width .2s ease;
 
   /* adjust as needed */
   background-color: white;
+
 }
+
+
+
 
 .sidebar-links {
   display: flex;
@@ -39,15 +44,29 @@
 }
 
 .sidebar-item {
-  width: 100%;
+  // width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: inherit;
+
+    
+  &:hover {
+    filter: grayscale(0%) opacity(1);
+    background: rgb(40, 40, 40);
+    // width: clamp(100px,10vw,300px);
+
+
+    
+  }
 }
 
 .sidebar-link {
   display: flex;
   align-items: center;
   height: 5rem;
-  // justify-content: center;
-  width: inherit;
+  width:fit-content;
+  justify-content: center;
   text-decoration: none;
   filter: grayscale(100%) opacity(0.7);
   transition: 0.3s;
@@ -59,10 +78,7 @@
 
   /* Adjust timing as needed */
 
-  &:hover {
-    filter: grayscale(0%) opacity(1);
-    background: rgb(40, 40, 40);
-  }
+
 }
 
 
@@ -74,16 +90,15 @@
 
 .link-text {
   display: none;
-  margin-left: 1rem;
   color: antiquewhite;
   pointer-events: none;
   user-select: none;
+  margin-left: 1vw;
 }
 
 .sidebar-link svg {
   font-size: 5vh;
   color: rgb(255, 255, 255);
-  margin: 0 1.35vw; ///IMPORTANT FOR ICONS
   
 }
 
@@ -206,24 +221,37 @@
 
 @media only screen and (min-width: 900px) {
   .sidebar {
-    // width: 5vw;
     height: 100%;
-    width: 5vw;
     left: 0;
-    top: 0;
-    padding: 0;
-    margin: 0;
+    // top: 0;
+    // padding: 0;
+    // margin: 0;
 
-    &:hover {
-      width: 15rem;
-      transition: 0.2s;
+    &.hover {
+
+      // transition: 0.2s;
 
       /* adjust as needed */
 
       .link-text {
         display: block;
+
       }
     }
+    // &.unhovered {
+    //   width: min-content;
+
+    // }
+    &.hover {
+      width: clamp(250px,10vw,300px);
+      justify-content: space-around;
+
+
+    }
+    .sidebar-logo svg{
+      font-size: clamp(25px,1vw,30px);
+    }
+
   }
 
   .sidebar-link{
@@ -235,7 +263,7 @@
 
 
   .sidebar-link svg{
-    font-size: clamp(2vw , 0.70rem , 2vw);
+    font-size: clamp(25px , 0.70rem , 30px);
   }
 
   @for $i from 1 through 6 {
@@ -248,13 +276,13 @@
 
 @media only screen and (min-width: 1500px) {
   .sidebar-link svg{
-    font-size: 1.7vw;
-    margin: 0 1.5vw; 
+    font-size: clamp(25px,1vw,30px);
+    // margin: 0 1.5vw; 
   }
 
   .sidebar-logo svg {
-    font-size: 2.2vw;
-    margin: 0 2.5vh;
+    font-size: clamp(30px,1vw,30px);
+    // margin: 0 2.5vh;
   }
 
 }

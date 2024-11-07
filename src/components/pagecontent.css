@@ -1,0 +1,30 @@
+.page-content {
+
+
+    z-index: 1; /* ensure it's above other elements */
+}
+
+.page-content.active {
+    display:flex;
+    justify-content: right;
+    position: relative;
+    opacity: 1;
+    /* transition: opacity 0.5s ease-in-out; */
+}
+
+.page-content.inactive {
+    display: none;
+    opacity: 0;
+}
+
+.sidebar {
+    width: 70px ; 
+  }
+  
+  .main-page.active {
+
+    overflow-y: auto; /* If you want scrolling in the main content */
+  }
+
+
+

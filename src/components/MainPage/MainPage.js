@@ -196,7 +196,11 @@ const MainPage = ({isActive}) => {
   return (
     <div  className={`main-page ${isActive ? 'active' : 'inactive'}`} >
           <div className='top' id='top' ref={mainpageRef}>
-            <div className="header"><h1>Hello, I am <br></br>Stancu Rudolf Luca.<br></br>and I am a<br></br> Web Developer.</h1>
+          <video id="background-video" autoplay loop muted poster="src\media\vecteezy_galaxy-and-nebula-abstract-space-background-endless_24165157.mp4">
+            <source src="src\media\vecteezy_galaxy-and-nebula-abstract-space-background-endless_24165157.mp4" type="video/mp4"/>
+          </video>
+            <div className="header">
+              <h1>Hello, I am <br></br>Stancu Rudolf Luca.<br></br>and I am a<br></br> Web Developer.</h1>
               <img src={myGif} alt="My gif" />
         
             </div>

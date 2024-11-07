@@ -9,15 +9,21 @@
 
 
 .intro {
+  display: flex !important; /* Force flex display */
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  height: 100vh;
+  width: 100%; /* Add this to ensure full width */
+  background: #111;
+  position: fixed; /* Add this */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: #111;
-    transition: background-color 2s ease;
-  }
+  transition: background-color 2s ease;
+}
 
 
   .hovered {
@@ -221,32 +227,30 @@
 
   
   @media only screen and (min-width: 900px) {
-
-
     .posttransition {
       position: fixed;
       left: 0;
       top: 0;
-      list-style: none;
       width: 100%;
       height: 100vh;
       z-index: 99;
       background-color: white;
-      transition: width 2s, background-color 2s;
+      transition: width 2s ease-in-out, background-color 2s ease-in-out, visibility 0s 2s; /* Delayed visibility */
     }
-    
-    
-    
+  
+    /* Starting as fully white */
     .posttransition.inactive {
       width: 100%;
       background-color: white;
-      visibility: hidden;
+      visibility: hidden; /* Delay hiding until after transition */
     }
-    
+  
+    /* Transitioning to sidebar size and changing color */
     .posttransition.active {
-      width: 5vw;
+      width: 70px;
+      height: 100vh;
       background-color: rgb(57, 57, 57);
-      z-index: 99;
+      z-index: 101;
+      visibility: visible;
     }
-    
   }
