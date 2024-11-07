@@ -17,7 +17,6 @@
     "@types/three": "^0.157.0",
     "cors": "^2.8.5",
     "file-saver": "^2.0.5",
-    "gh-pages": "^6.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-modal": "^3.16.1",
@@ -61,6 +60,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^6.2.0",
     "sass": "^1.69.6"
   }
 }
