@@ -19,6 +19,7 @@
     min-height: 450px;
     max-height: 80vh;
     animation-delay: 2s;
+
     user-select: none;
     /* pointer-events: none; */
     animation: fadeInLeft 2s forwards;

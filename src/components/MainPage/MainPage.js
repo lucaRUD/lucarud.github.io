@@ -224,8 +224,10 @@ const MainPage = ({isActive}) => {
 
             </div>
 
-
-                <img src={luca} className='about-image' alt="lowerGif"></img>
+                <div className='about-image-container'>
+                  <img src={luca} className='about-image' alt="lowerGif"></img>
+                </div>
+                
 
                 <DownloadButtonMobile/>
 
