@@ -13,7 +13,6 @@ import { FontAwesomeIcon,} from '@fortawesome/react-fontawesome';
 import { faAngleDoubleDown,faDownload,faXmark } from '@fortawesome/free-solid-svg-icons';
 import { faWindowRestore } from '@fortawesome/free-regular-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import myGif from '../../media/rotating sandwich.gif';
 import sideVideo from "../../media/neon-light-land.mp4";
 import luca from './luca.jpg';
 import nebula from "../../media/nebula.mp4";
@@ -33,7 +32,7 @@ Modal.setAppElement('#root')
 function DownloadButtonDesktop() {
   const handleDownload = async () => {
     try {
-      const response = await fetch('/CVjan2024.pdf');
+      const response = await fetch('/CV-Stancu Rudolf Luca-2025.pdf');
       const blob = await response.blob();
       saveAs(blob, 'CV-Stancu-Luca.pdf');
     } catch (error) {
@@ -53,7 +52,7 @@ function DownloadButtonDesktop() {
 function DownloadButtonMobile() {
   const handleDownload = async () => {
     try {
-      const response = await fetch('/CVjan2024.pdf');
+      const response = await fetch('/CV-Stancu Rudolf Luca-2025.pdf');
       const blob = await response.blob();
       saveAs(blob, 'CV-Stancu-Luca.pdf');
     } catch (error) {
