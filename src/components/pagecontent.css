@@ -23,8 +23,12 @@
   
   .main-page.active {
 
-    overflow-y: auto; /* If you want scrolling in the main content */
+    overflow-y: scroll; /* or auto */
+    scrollbar-width: none;        /* Firefox */
+    -ms-overflow-style: none;     /* IE 10+ */
   }
 
 
-
+  .main-page.active::-webkit-scrollbar {
+    display: none;                /* Chrome, Safari, Edge */
+  }

@@ -5,11 +5,11 @@ import './sidebar.scss';
 import { RefsContext } from '../../App'; // adjust the path as needed
 
 const Sidebar = ({ isActive }) => {
-  const { aboutRef, projectsRef, mainpageRef } = useContext(RefsContext);
+  const { aboutRef, projectsRef, mainPageRef } = useContext(RefsContext);
   const [hovered, setHovered] = useState(false);
 
   const links = [
-    { name: 'HOME', icon: faHouseChimney, ref: mainpageRef },
+    { name: 'HOME', icon: faHouseChimney, ref: mainPageRef },
     { name: 'ABOUT', icon: faInfoCircle, ref: aboutRef },
     { name: 'PROJECTS', icon: faProjectDiagram, ref: projectsRef },
   ];

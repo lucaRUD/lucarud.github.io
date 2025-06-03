@@ -29,12 +29,12 @@
                  
   }
   
-  .header img{
+  .header video{
     max-width: 90%;
-    max-height: 800px;
+    max-height: 700px;
     min-height: 300px;
     margin-right: 5vw;
-    box-shadow: 15px 16px 1px rgba(0,0,0,0.32);
+    /* box-shadow: 15px 16px 1px rgba(0,0,0,0.32); */
     align-items: center;
     height: 35vmax;
   
@@ -144,7 +144,7 @@
     width: 100%;
   }
   
-  .header img{
+  .header video{
     display: none;
   }
   .header h1{
@@ -157,7 +157,6 @@
   }
   
   }
-  
   
   
   

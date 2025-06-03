@@ -13,8 +13,10 @@ import { FontAwesomeIcon,} from '@fortawesome/react-fontawesome';
 import { faAngleDoubleDown,faDownload,faXmark } from '@fortawesome/free-solid-svg-icons';
 import { faWindowRestore } from '@fortawesome/free-regular-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import myGif from './movingwall.gif';
+import myGif from '../../media/rotating sandwich.gif';
+import sideVideo from "../../media/neon-light-land.mp4";
 import luca from './luca.jpg';
+import nebula from "../../media/nebula.mp4";
 import './css/top.css';
 import './css/about.css';
 import './css/project-gallery.css';
@@ -191,17 +193,20 @@ function ProjectGallery() {
 
 const MainPage = ({isActive}) => {
 
-  const { aboutRef, projectsRef, mainpageRef } = useContext(RefsContext);
+  const { aboutRef, projectsRef, mainPageRef } = useContext(RefsContext);
 
   return (
     <div  className={`main-page ${isActive ? 'active' : 'inactive'}`} >
-          <div className='top' id='top' ref={mainpageRef}>
-          <video id="background-video" autoplay loop muted poster="src\media\vecteezy_galaxy-and-nebula-abstract-space-background-endless_24165157.mp4">
-            <source src="src\media\vecteezy_galaxy-and-nebula-abstract-space-background-endless_24165157.mp4" type="video/mp4"/>
+          <div className='top' id='top' ref={mainPageRef}>
+          <div className='video-background-container'>
+          <video src={nebula} className="background-video" loop autoPlay muted preload="auto">
+
           </video>
+          </div>
             <div className="header">
-              <h1>Hello, I am <br></br>Stancu Rudolf Luca.<br></br>and I am a<br></br> Web Developer.</h1>
-              <img src={myGif} alt="My gif" />
+              <h1>Hello, I am <br></br>Stancu Rudolf Luca<br></br>and I am a<br></br> Web Developer.</h1>
+              {/* <img src={myGif} alt="My gif" /> */}
+              <video src={sideVideo} className="side-video" loop autoPlay muted preload="auto"/>
         
             </div>
             <div className='buttons'>
@@ -214,30 +219,33 @@ const MainPage = ({isActive}) => {
         
           <div className='about' id='about'  ref={aboutRef}>
             <div className='about-container'>
-            <div className='about-text'>
-                <h2>Who am I?</h2>
-                <p>        My name is Stancu Luca, i am based in Timișoara,Romania. My pursuit in understanding technology started in my childhood and since then, this growing passion has shaped
-                most of my career choices. After finishing middle school i chose mathematics and informatics as my main subject in highschool.After finising highschool i went to college and chose to pursue Computer Science at the West University of Timișoara.
-                In my college years I started getting interested in Web Development and since then I have been on a learning journey, adventuring in various projects.
-                </p>
-                <DownloadButtonDesktop/>
+              <div className='about-text'>
+                  <h2>Who am I?</h2>
+                  <p>        My name is Stancu Luca, i am based in Timișoara,Romania. My pursuit in understanding technology started in my childhood and since then, this growing passion has shaped
+                  most of my career choices. After finishing middle school i chose mathematics and informatics as my main subject in highschool.After finising highschool i went to college and chose to pursue Computer Science at the West University of Timișoara.
+                  In my college years I started getting interested in Web Development and since then I have been on a learning journey, adventuring in various projects.
+                  </p>
+                  <DownloadButtonDesktop/>
 
-            </div>
+              </div>
 
-                <div className='about-image-container'>
-                  <img src={luca} className='about-image' alt="lowerGif"></img>
-                </div>
-                
+              <div className='about-image-container'>
+                    <img src={luca} className='about-image' alt="lowerGif"></img>
+              </div>
+                  
 
-                <DownloadButtonMobile/>
+                  <DownloadButtonMobile/>
 
-            </div>
+              </div>
+
           </div> 
           
           <div id='projects' ref={projectsRef}>
             <ProjectGallery/>
           </div>
+
           <Footer/>
+
 
     </div>
   );

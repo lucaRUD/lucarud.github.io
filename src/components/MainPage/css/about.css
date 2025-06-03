@@ -2,8 +2,7 @@
 
 .about{
     height: 100vh;
-    width: 100%;
-    min-height:700px;
+    width: 97vw;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -32,7 +31,7 @@
   .about-text{
     max-width: 50%;
     width: 50%;
-    margin: 15vh 0;
+    height: 60vh;
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -52,6 +51,7 @@
     font-family: 'Poppins', sans-serif;
     font-size: clamp(0rem, 1.3vmax, 21px);
     min-width: 40vw;
+    font-weight: 300;
     text-align: justify;
     hyphens: auto;
     -webkit-hyphens: auto;
@@ -71,8 +71,8 @@
   }
   
   .about-image{
-    height: clamp(0px, 10vh, 700px);
-    width: auto;
+    width: 30vw;
+    max-height: 60vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -92,45 +92,49 @@
   
     .about{
       flex-direction: column;
-      height: 100vh; 
-      min-height: 700px;
-      /* padding-top: 5vh; */
-      align-items: center;
-      /* atentie mare daca nu merge marimea */
+      height: fit-content; 
     }
     .about-container{
       flex-direction: column;
-      justify-content: center;
-      height: 90vh;
+      justify-content: start;
+      height: 100vh;
       min-height: 650px;
-      align-items: center;
+      
     }
   
     .about-text{
-      max-width: 100vh;
-      margin: 0 0;
-      padding: 0;
-      height: 70vh;
-      width: 90%;
+      max-width: 100%;
+      max-height: 45vh;
+      width: 100%;
       border-right-style: none ;
+    }
+
+    .about-text h2{
+      text-align: center;
     }
   
     .about-text p{
       max-height: 50vh;
+      font-size: clamp(0.8rem, 1.3vmax,1.8rem);
       width: 90%;
-      font-size: clamp(0.8rem, 1.5vmax,2rem);
-      padding:  0 8vh;
-      max-width: 90vw;
+      max-width: 550px;
+
     
+    }
+
+    .about-image-container{
+      display: flex;
+      align-items: baseline;
+      width: 100%;
+      max-height: 50vh;
+      justify-content: center;
+      margin-bottom: 20px;
     }
   
     .about-image{
       padding: 0;
-      height: auto;
-      width:min-content;
-      min-height: 300px;
-
-      margin-bottom: 4vh;
+      width:40vw;
+      margin-bottom: 2vh;
       margin-right: 0;
     }
   
